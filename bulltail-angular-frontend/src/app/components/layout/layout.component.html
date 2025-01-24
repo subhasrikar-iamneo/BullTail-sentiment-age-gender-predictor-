@@ -1,0 +1,55 @@
+<body style="background-color: #90c7a7;">
+  <div>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+        <div class="container">
+          <a class="navbar-brand" (click)="onhome()" title="Home" style="cursor: pointer;">
+            <span style="color: #5e9693;">Bull</span><span style="color: #fff;">tail</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item" >
+                <a class="nav-link" [routerLink]="'/emodict'" routerLinkActive="active">Emotion</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" routerLink="/imgpred" routerLinkActive="active">Guess your Age</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row align-items-center" style="margin-right: 3%;">
+            <!-- Logout Button -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/srikarsubha?igsh=MTcyeDdsZ2RsdWhqdQ==" title="Instagram">
+                  <img src="assets/images/instagram.svg" alt="Instagram" width="16" height="16">
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/subhasrikar-iamneo" title="Github">
+                  <img src="assets/images/github.svg" alt="GitHub" width="16" height="16">
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/subhasrikar-iamneo" title="Linkedin">
+                  <img src="assets/images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+
+                </a>
+              <li class="nav-item me-3 me-lg-0" style="margin-left: 15%; margin-top: 3%;">
+                <button class="btn btn-outline-danger btn-sm" (click)="OnLogOut()">Logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    </header>
+  </div>
+  <div class="container pt-1">
+    <router-outlet></router-outlet>
+  </div>
+</body>

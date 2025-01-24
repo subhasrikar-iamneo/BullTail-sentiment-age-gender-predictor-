@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <!-- Background image is set in CSS -->
+            <div style="padding-left: 10%; padding-bottom: 5% ;padding-right: 10% ;margin-top: 600px; background-color: rgb(255, 230, 201); ">
+              <h1>Yeah, it's time to do something</h1>
+              <p>Arise Awake And Stop-Not Till The Goal Is Reached</p>
+            </div>
+
+        </div>
+        <div class="right-side">
+            <div class="logo">
+                <!-- Simple plus icon as logo -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1874" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+            </div>
+            <h1>Login to your Account</h1>
+            <p class="subtitle">Don't wana mix your info with others</p>
+
+            <button class="google-btn">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSIjRkZDMTA3IiBkPSJNNDMuNjExIDIwLjA4M0g0MlYyMEgyNHY4aDExLjMwM2MtMS42NDkgNC42NTctNi4wOCA4LTExLjMwMyA4Yy02LjYyNyAwLTEyLTUuMzczLTEyLTEyczUuMzczLTEyIDEyLTEyYzMuMDU5IDAgNS44NDIgMS4xNTQgNy45NjEgMy4wMzlsNS42NTctNS42NTdDMzQuMDQ2IDYuMDUzIDI5LjI2OCA0IDI0IDRDMTIuOTU1IDQgNCAxMi45NTUgNCAyNHM4Ljk1NSAyMCAyMCAyMHMyMC04Ljk1NSAyMC0yMGMwLTEuMzQxLS4xMzgtMi42NS0uMzg5LTMuOTE3eiIvPjxwYXRoIGZpbGw9IiNGRjNEMDAiIGQ9Im02LjMwNiAxNC42OTEgNi41NjcgNC44MTlDMTQuNjU1IDE1LjEwOCAxOC45NjEgMTIgMjQgMTJjMy4wNTkgMCA1Ljg0MiAxLjE1NCA3Ljk2MSAzLjAzOWw1LjY1Ny01LjY1N0MzNC4wNDYgNi4wNTMgMjkuMjY4IDQgMjQgNGMtNy4xMzQgMC0xMy4zMiA0LjEtMTYuMjk1IDEwLjAyIi8+PHBhdGggZmlsbD0iIzRDQUY1MCIgZD0iTTI0IDQ0YzUuMTY2IDAgOS44Ni0xLjk3NyAxMy40MDktNS4xOTJsLTYuMTktNS4yMzhBMTEuOTEgMTEuOTEgMCAwIDEgMjQgMzZjLTUuMjAyIDAtOS42MTktMy4zMTctMTEuMjgzLTcuOTQ2bC02LjUyMiA1LjAyNUM5LjUwNSAzOS41NTYgMTYuMjI3IDQ0IDI0IDQ0eiIvPjxwYXRoIGZpbGw9IiMxOTc2RDIiIGQ9Ik00My42MTEgMjAuMDgzSDQyVjIwSDI0djhoMTEuMzAzYTEyLjA0IDEyLjA0IDAgMCAxLTQuMDg3IDUuNTcxbC4wMDMtLjAwMiA2LjE5IDUuMjM4QzM2Ljk3MSAzOS4yMDUgNDQgMzQgNDQgMjRjMC0xLjM0MS0uMTM4LTIuNjUtLjM4OS0zLjkxN3oiLz48L3N2Zz4=" alt="Google logo" style="margin-right: 8px;">
+                Continue with Google
+            </button>
+
+            <div class="divider">or Sign in with Email</div>
+
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" [(ngModel)]="loginobj.email" id="email" name="email" placeholder="mail@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"  [(ngModel)]="loginobj.password" id="password" name="password" placeholder="••••••••">
+                </div>
+
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" (click)="OnLogin()" class="login-btn">Login</button>
+            </form>
+
+            <div class="create-account">
+                Not Registered Yet? <a href="#">Create an account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

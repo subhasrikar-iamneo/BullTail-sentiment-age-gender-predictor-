@@ -1,0 +1,55 @@
+<div class="childclass" style="background-color: rgb(185, 169, 140);" >
+
+    <br>
+    <br>
+    <br>
+    <img src="https://manhattanmentalhealthcounseling.com/wp-content/uploads/2022/11/How-to-be-less-emotional-scaled.jpeg" class="d-block w-100" alt="Chicago" style="height: 200%; margin-top: -10px;">
+
+    <br><br>
+    <!-- Contact Section -->
+  <div id="contact" class="container my-7 mx-3" style="width: 90%; padding-left: 9%;">
+    <h3 class="text-center">Emo-Detect</h3>
+    <p class="text-center"><em>Type your sentence below </em></p>
+
+    <div class="row">
+      <div class="col-md-4" style="background-color: #90c7a7; border-style: ridge; border-radius: 10px; height:100%;">
+        <em>How's your mood!</em>
+        <p></p>
+        <p><span class="bi bi-geo-alt"></span>Your mood right now is:</p>
+        <input style="border-radius:20px; background-color: rgb(206, 168, 118); border-color: azure;" type="reset" [(ngModel)]="detect.outemo">
+        <p></p>
+      </div>
+
+      <div class="col-md-8">
+        <form>
+          <div class="row">
+            <div class="col-sm-12 mb-3">
+              <p class="form-control" style="background-color: #90c7a7; border-radius: 10px; text-align: center;"><strong>Type it from the bottom of your heart</strong></p>
+            </div>
+          </div>
+          <textarea class="form-control mb-3" [(ngModel)]="detect.inputtex" style="background-color: #90c7a7; border-radius: 10px;" id="comments" name="comments" placeholder="Type it here" rows="3"></textarea>
+          <button class="btn btn-primary" (click)="getexp()" style="background-color: #90c7a7; border-color: aliceblue; padding-right:10px;" type="submit">Get Explination</button>
+
+          <button class="btn btn-primary float-end" (click)="clear()" style="background-color: #90c7a7; border-color: aliceblue; margin-left:10px;" type="submit">Clear</button>
+          <button class="btn btn-primary float-end" (keypress.enter)="send()" (click)="send()" style="background-color: #90c7a7; border-color: aliceblue;" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    @if (loding) {
+      <div class="spinner-border"></div>
+    } @else {
+      @if (imgload) {
+        <div>
+          <em>you will get your explination here</em>
+        </div>
+      } @else {
+        <div>
+          <img [src]="limimg" style="width:33.5%; height:33.5%; border-radius: 10px; margin-top:-50px; margin-left: -10px;" alt="" title="lime image">
+        </div>
+      }
+    }
+  </div>
+  <br>
+</div>
+<div class="text-center py-3 bg-dark text-light"></div>

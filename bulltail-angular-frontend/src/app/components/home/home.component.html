@@ -1,0 +1,112 @@
+
+<div class="childclass" style="background-color: rgb(185, 169, 140);" >
+
+  <!-- Carousel -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <video #video class="d-block w-100" autoplay muted loop playsinline>
+          <source src="assets/images/hmimg.mp4" type="video/mp4">
+          <img src="assets/images/ny.jpg" alt="New York">
+        </video>
+        <!-- <div class="text-center py-3 bg-dark text-light"></div> -->
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Welcome</h3>
+          <p>This site helps you to find what you need.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" (click)="goemo()">
+        <img src="https://manhattanmentalhealthcounseling.com/wp-content/uploads/2022/11/How-to-be-less-emotional-scaled.jpeg" class="d-block w-100" alt="Chicago" style="height: 150%;">
+        <div class="text-center py-3 bg-dark text-light"></div>
+        <div class="carousel-caption d-none d-md-block" style="color: black;">
+          <h3 style="color: black;">Emo-Detect</h3>
+          <p>Wana know what's your mood?</p>
+          <p>Express how's your day been in a single sentence and get to know whats your mood</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" (click)="goimg()">
+        <div class="text-center py-3 bg-dark text-light" ></div>
+        <img src="https://i.pinimg.com/736x/f9/3d/50/f93d50bcb2a100f14603ccb715893090.jpg" class="d-block w-100" alt="Los Angeles">
+        <div class="text-center py-3 bg-dark text-light" ></div>
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Age-Detect</h3>
+          <p>Hmm curious about what's their age?</p>
+          <p>Just upload a pic of them and let us help you finding their age</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Container (The Band Section) -->
+  <div id="band" class="container text-center">
+    <h3>THE BULLTAIL</h3>
+    <p><em>Discover Insights with BULLTAIL!</em></p>
+    <p>
+    Welcome to <strong>BULLTAIL</strong>, a cutting-edge platform designed to bring intelligence and innovation to your fingertips. Our website offers two powerful features to explore:
+    </p>
+    <p>
+    The first is our <strong>Emotion Detection</strong> tool, which analyzes the text you write to uncover the emotions behind your words. Whether you're curious about the tone of your message or want to understand your feelings better, BULLTAIL provides an insightful glimpse into your emotional state.
+    </p>
+    <p>
+    The second is our advanced <strong>Age and Gender Prediction</strong> tool, which uses face image analysis to estimate age and identify gender. Powered by sophisticated algorithms, this feature is perfect for those who want to experience the wonders of modern AI technology in action.
+    </p>
+    <p>
+    At <strong>BULLTAIL</strong>, we aim to combine technology and usability, making it easy for everyone to access AI-driven insights. Whether you're exploring emotions or discovering demographic details, our tools are here to empower and amaze you.
+    </p>
+    <p><em>Experience the future of AI-powered insights with BULLTAIL!</em></p>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="container my-5">
+    <h3 class="text-center">Contact</h3>
+    <p class="text-center"><em>We would love to get your suggesions</em></p>
+
+    <div class="row">
+      <div class="col-md-4" style="background-color: #90c7a7; border-radius: 10px; height:100%; border-color: aliceblue; border-style: ridge;">
+        <em>My contact info</em>
+        <p></p>
+        <p><span class="bi bi-geo-alt"></span> Coimbatore, India</p>
+        <p><span class="bi bi-telephone"></span> Phone: +91 9014046470</p>
+        <p><span class="bi bi-envelope"></span> Email: subhasrikar18&#64;gmail.com</p>
+      </div>
+      <div class="col-md-8">
+        <form>
+          <div class="row">
+            <div class="col-sm-6 mb-3">
+              <input class="form-control" style="background-color: #90c7a7; border-radius: 10px;" [(ngModel)]="clname" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <input class="form-control" style="background-color: #90c7a7; border-radius: 10px;" [(ngModel)]="clemail" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea class="form-control mb-3" style="background-color: #90c7a7; border-radius: 10px;" [(ngModel)]="clcontent" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+          <button class="btn btn-primary float-end" (click)="sendmsg()" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-light">
+  </footer>
+</div>

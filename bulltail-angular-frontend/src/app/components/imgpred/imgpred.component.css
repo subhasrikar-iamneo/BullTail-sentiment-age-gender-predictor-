@@ -1,0 +1,16 @@
+.imgpred-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.upload-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+video, canvas {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}

@@ -1,0 +1,74 @@
+<div class="childclass" style="background-color: rgb(185, 169, 140);" >
+
+  <br>
+  <br>
+  <br>
+  <img src="https://i.pinimg.com/736x/f9/3d/50/f93d50bcb2a100f14603ccb715893090.jpg" class="d-block w-100" alt="Chicago" style="height: 200%; margin-top:-10px;">
+
+  <br><br>
+  <!-- Contact Section -->
+<div id="contact" class="container my-7 mx-3" style="width: 90%; padding-left: 9%;">
+  <h3 class="text-center">Get-Age | Gender</h3>
+  <p class="text-center"><em>Upload or take an image of your face </em></p>
+
+  <div class="row">
+    <div class="col-md-4" style="background-color: #90c7a7; border-style: ridge; border-radius: 10px; height:100%;">
+      <em>Here's the Preview</em>
+      <p></p>
+      <img *ngIf="imagePreview" [src]="imagePreview" alt="Your Image" style="width: 100%; max-width: 300px; border-radius: 10px;" />
+      <p></p>
+    </div>
+
+    <div class="col-md-8 container position-relative">
+        <div class="row">
+          <div class="col-sm-12 mb-3">
+            <p class="form-control" style="background-color: #90c7a7; border-radius: 10px; text-align: center;"><strong>Try to upload an image whch has only the  face</strong></p>
+          </div>
+        </div>
+        <div class="row" style="background-color: #90c7a7; border-color: aliceblue;border-style: dashed; border-radius: 10px; margin-left:2px; height:200px; margin-bottom: 10px;">
+          <div class="col-md-4">
+            <input class="btn-secondary" style="margin-top: 10px;" type="file" id="fileUpload" (change)="onFileSelected($event)" accept="image/*">
+            <button class="btn btn-secondary" (click)="openCamera()"  style="background-color: #90c7a7; border-color: aliceblue; padding-right:10px; margin-top: 10px;" type="submit">Take Photo</button>
+
+
+          </div>
+          <div class="col-md-7" style="padding-left:100px; border-radius: 10px; ">
+            <video #cameraStream autoplay playsinline style="display: none; width: 100%;margin-top: 7px; max-width: 300px; border-radius: 10px;"></video>
+            <canvas #photoCanvas style="display: none;"></canvas>
+            <a (click)="capturePhoto()" class="position-absolute bottom-0 end-0 p-3" style="margin-bottom:50px;"  title="Capture">
+              <img src="assets/images/camera.svg" alt="capture" width="25" height="25">
+            </a>
+
+          </div>
+        </div>
+
+        <button class="btn btn-primary float-end" (click)="clear()" style="background-color: #90c7a7; border-color: aliceblue; margin-left:10px;" type="submit">Clear</button>
+        <button class="btn btn-primary float-end" (click)="send()"  style="background-color: #90c7a7; border-color: aliceblue; margin-left:10px;" type="submit">Send</button>
+        <button class="btn btn-primary float-end" (click)="getage()"  style="background-color: #90c7a7; border-color: aliceblue; margin-left:10px; " type="submit">Get Age</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4" style="border-radius: 10px; background-color: chocolate; text-align: center; margin-left:-10px; margin-top: -20px; border-style: inset;">
+
+      @if (!agedisp) {
+        <div>
+          <em>you will get your Age & Gender here</em>
+        </div>
+      } @else {
+        @if (isloading) {
+          <div class="spinner-border"></div>
+        } @else {
+          <div>
+            <input type="text" [(ngModel)] = "agetex" style="background-color: chocolate; border-radius: 10px; border-style: hidden;">
+          </div>
+        }
+      }
+
+    </div>
+</div>
+<br>
+</div>
+<div class="text-center py-3 bg-dark text-light"></div>
